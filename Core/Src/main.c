@@ -93,7 +93,7 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-	app_main();
+  app_main();
   /* USER CODE END 2 */
 
   /* Infinite loop */
