@@ -25,6 +25,10 @@ void smg_init(hc138_t *hc138, hc595_t *hc595, smg_t *ret_smg);
 
 void smg_from_string(smg_t *smg, const char *str);
 
+void smg_set(smg_t *smg, uint8_t index, char value);
+
+void smg_dot(smg_t *smg, uint8_t index, uint8_t add_or_remove);
+
 void smg_test(smg_t *smg);
 
 void smg_flush(smg_t *smg);

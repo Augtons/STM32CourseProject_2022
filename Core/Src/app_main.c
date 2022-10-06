@@ -37,7 +37,6 @@ void app_main(void) {
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
   simple_delay(500);
-  uint8_t num = 0;
     
   switch (GPIO_Pin) {
     case KEY0_Pin: {
