@@ -1,5 +1,6 @@
 .vscode
 
-/MDK-ARM/project1/**
+/project1/MDK-ARM/project1/**
+/project2/MDK-ARM/project2/**
 
-/MDK-ARM/*.*.*
+/project*/MDK-ARM/*.*.*
