@@ -64,6 +64,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
        
         
         AT24CXX_WriteOneByte(2, high);
+        simple_delay(15000);
         AT24CXX_WriteOneByte(3, low);
       }
       break;
@@ -113,9 +114,9 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
     }
     float val = (float)adc_val/4095 * 3.3f;
     float dataf = (float)data/4095 * 3.3f;
-    //sprintf(buf, "%.2f_%.2f_", dataf, val);
+    sprintf(buf, "%.2f_%.2f_", dataf, val);
     val = pid_update(&pid, val);
-    sprintf(buf, "%04d%04.2fV", data, val);
+    //sprintf(buf, "%04d%04.2fV", data, val);
     
     smg_from_string(&smg, buf);
   }
