@@ -36,11 +36,11 @@ void app_main() {
 
   init_smg();
   
-  HAL_TIM_Base_Start_IT(&htim1);
-  HAL_TIM_Base_Start_IT(&htim2);
+  HAL_TIM_Base_Start_IT(&htim1);  // 数码管扫描
+  HAL_TIM_Base_Start_IT(&htim2); // ADC转换
 
-  HAL_ADCEx_Calibration_Start(&hadc1);
-  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&adc_val, 1);
+  HAL_ADCEx_Calibration_Start(&hadc1);  // 启动ADC自动校准
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&adc_val, 1);   // 启动DMA
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
